@@ -1,0 +1,34 @@
+.crumbs{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__link{
+    display: flex;
+    padding: 0;
+    margin: 20px 0 0 50px;
+    list-style: none;
+    flex-wrap: wrap;
+
+    @include breakpoint(max-width 1024px) {
+      margin-top: 15px;
+    }
+
+    @include breakpoint(max-width 500px) {
+      margin-top: 5px;
+    }
+    li{
+      a{
+        color: #b89855;
+        font-family: $latoLight;
+        font-size: 13px;
+        .fa-chevron-right{
+          font-size: 10px;
+          color: #030621;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

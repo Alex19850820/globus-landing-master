@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&subset=cyrillic');
+
+$latoBlack: 'Lato-Black';
+$latoBold: 'Lato-Bold';
+$latoRegular: 'Lato-Regulat';
+$latoLight: 'Lato-light';
+$myriad: 'Myriad-pro';
+
+@font-face {
+  font-family: 'Myriad-pro';
+  src: url('../fonts/myriad/MyriadProRegular.woff') format('woff'),
+  url('../fonts/myriad/MyriadProRegular.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Black';
+  src: url('../fonts/lato/LatoBlack.woff') format('woff'),
+  url('../fonts/gilroy/LatoBlack.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../fonts/lato/LatoBold.woff') format('woff'),
+  url('../fonts/gilroy/LatoBold.woff2') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Regulat';
+  src: url('../fonts/lato/LatoRegular.woff') format('woff'),
+  url('../fonts/gilroy/LatoRegular.woff2') format('woff2');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Lato-light';
+  src: url('../fonts/lato/LatoLight.woff') format('woff'),
+  url('../fonts/gilroy/LatoLight.woff2') format('woff2');
+  font-weight: normal;
+}

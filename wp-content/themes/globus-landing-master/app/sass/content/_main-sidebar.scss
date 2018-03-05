@@ -1,0 +1,196 @@
+.sidebar{
+  float: left;
+  transition: 500ms ease;
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  padding: 40px;
+  z-index: 9999;
+  background-color: #030621;
+  @include breakpoint(max-width 1024px){
+    left: -270px;
+  }
+  &__logo{
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__phone-number{
+    width: 100%;
+    float: left;
+    a{
+      color: #ffffff;
+      font-family: $latoLight;
+      font-size: 21px;
+    }
+  }
+  &__discount-btn{
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: #b89855;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: 1px solid #b89855;
+    transition: 200ms ease;
+    animation: out 2s infinite ease-out;
+    &:hover{
+      color: #fff;
+      border-color: #fff;
+      transition: 200ms ease;
+    }
+  }
+  &__feedback{
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    color: #d1b374;
+    font-family: $latoBold;
+    font-size: 14px;
+    transition: 200ms ease;
+
+    &:hover{
+      transition: 200ms ease;
+      color: #fff;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      height: 12px;
+      width: 10px;
+      background: url("../img/icons/phone.png") no-repeat center center;
+      background-size: contain;
+
+    }
+  }
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+    li{
+      a{
+        color: #ffffff;
+        font-family: $latoLight;
+        font-size: 14px;
+        transition: 200ms ease;
+        padding-bottom: 15px;
+        width: 100%;
+        display: inline-block;
+        &:hover{
+          color: #d1b374;
+          transition: 200ms ease;
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+  .header__nav{
+    display: none;
+
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+    background: transparent;
+    @include breakpoint(max-width 1024px){
+      display: flex;
+    }
+    li{
+      padding: 0;
+      a{
+        color: #ffffff;
+        font-family: $latoLight;
+        font-size: 14px;
+        transition: 200ms ease;
+        width: 100%;
+        padding: 0 0 15px 0 ;
+        display: inline-block;
+        text-transform: none;
+        &:hover{
+          color: #d1b374;
+          background: transparent;
+          transition: 200ms ease;
+        }
+      }
+    }
+  }
+  &__socials{
+    display: flex;
+    width: 100%;
+    a{
+      margin-right: 15px;
+      color: #b89855;
+      font-size: 17px;
+      transition: 200ms ease;
+      .fa-facebook-f{
+        &:hover{
+          transition: 200ms ease;
+          color: #4167b2;
+        }
+      }
+      .fa-vk{
+          &:hover{
+            transition: 200ms ease;
+            color: #6e92b6;
+          }
+        }
+      .fa-instagram{
+        &:hover{
+          transition: 200ms ease;
+          color: #e35e79;
+        }
+      }
+      .fa-google-plus-g{
+        &:hover{
+          transition: 200ms ease;
+          color: #cc4238;
+        }
+      }
+      .fa-youtube{
+        &:hover{
+          transition: 200ms ease;
+          color: #fe0000;
+        }
+      }
+
+      .fa-twitter {
+        &:hover {
+          transition: 200ms ease;
+          color: #1da1f2;
+        }
+      }
+    }
+  }
+}
+.active-bar{
+  left: 0;
+  position: fixed;
+  margin-right: 270px;
+  transition: 500ms ease;
+  z-index: 9999;
+  height: 100%;
+  overflow-y: scroll;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+@keyframes out {
+  0% {box-shadow: 0 0 0 0 rgba(184, 152, 85, 1);}
+  100% {box-shadow: 0 0 0 15px rgba(184, 152, 85, .05);}
+}

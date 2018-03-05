@@ -1,0 +1,29 @@
+.interesting {
+  &__title {
+    font-family: $latoBlack;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    &_colored {
+      color: #ecb133;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(max-width 1350px){
+      flex-wrap: wrap;
+    }
+    .build__item_interesting {
+      @include breakpoint(max-width 1350px){
+        width: 50%;
+      }
+      @include breakpoint(max-width 600px){
+        width: 100%;
+      }
+    }
+    .build__img {
+      background-size: cover!important;
+    }
+  }
+}

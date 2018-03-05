@@ -1,0 +1,95 @@
+.header {
+  position: relative;
+  float: left;
+  width: 100%;
+  border-bottom: 2px solid #b89855;
+  clear: both;
+  &__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+    background: #fff;
+    @include breakpoint(max-width 1024px){
+      display: none;
+    }
+    li {
+      display: inline-block;
+
+      a {
+        color: #b89855;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transition: 200ms ease;
+        display: inline-block;
+        padding: 20px 25px;
+        &:hover {
+          transition: 200ms ease;
+          background: #d1b374;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+.btn5 {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  width: 25px;
+  height: 25px;
+  top: 0px;
+  left: 10px;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  @include breakpoint(max-width 1024px){
+    display: block;
+  }
+}
+.btn5 .icon {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  top: 25px;
+  background-color: #b89855;
+}
+.btn5 .icon:before {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #b89855;
+  content: "";
+  top: -10px;
+}
+.btn5 .icon:after {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #b89855;
+  content: "";
+  top: 10px;
+}
+.btn5.open .icon {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.btn5.open .icon:before {
+  transform: rotateZ(-45deg) scaleX(0.75) translate(-15px, -4px);
+}
+.btn5.open .icon:after {
+  transform: rotateZ(45deg) scaleX(0.75) translate(-15px, 4px);
+}
+.btn5:hover {
+  cursor: pointer;
+}
+
