@@ -221,5 +221,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load custom functions
  */
-require get_template_directory() . '/includes/custom-functions.php';
+//require get_template_directory() . '/includes/custom-functions.php';
 
