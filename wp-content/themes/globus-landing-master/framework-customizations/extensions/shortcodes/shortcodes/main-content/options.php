@@ -26,24 +26,24 @@ $options = [
 	],*/
 	'house' => [
 		'type' => 'addable-popup',
-		'label' => __('Добавить место', '{domain}'),
+		'label' => __('Добавить информацию', '{domain}'),
 		'template' => '{{- h2 }}',
 		'size' => 'large', // small, medium, large
 		'limit' => 0, // limit the number of popup`s that can be added
 		'add-button-text' => __('добавить', '{domain}'),
 		'sortable' => true,
 		'popup-options' => [
-			'img'     => [
-				'type'  => 'upload',
-				'value' => '',
-				'label' => __('Добавить картинку здания', '{domain}'),
-				'images_only' => true,
-			],
-			'h2'     => [
-				'type'  => 'text',
-				'value' => '',
-				'label' => __('Заголовок', '{domain}'),
-			],
+//			'img'     => [
+//				'type'  => 'upload',
+//				'value' => '',
+//				'label' => __('Добавить картинку здания', '{domain}'),
+//				'images_only' => true,
+//			],
+//			'h2'     => [
+//				'type'  => 'text',
+//				'value' => '',
+//				'label' => __('Заголовок', '{domain}'),
+//			],
 			'price'     => [
 				'type'  => 'text',
 				'value' => 'от <span>2</span> млн. руб.',
