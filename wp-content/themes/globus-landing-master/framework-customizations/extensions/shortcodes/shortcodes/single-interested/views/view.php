@@ -24,22 +24,22 @@
 				<a href="<?php the_permalink(); ?>">
 					<div class="build__img" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
 				</a>
-				< class="build__desc">
+<!--				< class="build__desc">-->
 				<h2 class="build__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<div class="build__desc-wrap">
-						<div class="build__location">
-							<span><?=$atts[$i]['city']?></span>
-							<?=$atts[$i]['city']?>
-							<?php if(isset($atts[$i]['md'])):?>
-								<?=$atts[$i]['md']?>
-							<?php endif;?>
-						</div>
-						<div class="build__price">
-							<span><?=$atts['house'][$i]['price']?></span>
-							Срок сдачи: <?=$atts['house'][$i]['area']?>
-						</div>
+				<div class="build__desc-wrap">
+					<div class="build__location">
+						<span><?=$atts[$i]['city']?></span>
+						<?=$atts[$i]['city']?>
+						<?php if(isset($atts[$i]['md'])):?>
+							<?=$atts[$i]['md']?>
+						<?php endif;?>
+					</div>
+					<div class="build__price">
+						<span><?=$atts['house'][$i]['price']?></span>
+						Срок сдачи: <?=$atts['house'][$i]['area']?>
 					</div>
 				</div>
+<!--				</div>-->
 			</div>
 		<?php $i++; }?>
 	</div>

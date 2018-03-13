@@ -33,8 +33,14 @@ $(document).ready(function () {
             320: {
                 items: 3
             },
-            1000: {
+            770: {
                 items: 4
+            },
+            1455: {
+                items: 5
+            },
+            1650: {
+                items: 6
             }
         }
     });
@@ -200,17 +206,65 @@ function openTab(evt, tabName) {
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove('visible-content');
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" activeTab", "");
     }
-    document.getElementById(tabName).style.display = "flex";
+    var tab = document.getElementById(tabName);
+    tab.style.display = "flex";
+    tab.classList.add('visible-content');
     evt.currentTarget.className += " activeTab";
 
-    if(tabName === 'tab-partners') {
-        document.getElementById(tabName).querySelector('.tabcontent').style.display = "flex"
+    if(tab.querySelector('.tabcontent-1')) {
+        tab.querySelector('.tabcontent-1').style.display = "flex";
+        tab.querySelector('.tablinks-1').classList.add('activeInsideTab');
+
+        tab.querySelector('.tabcontentStyle').style.display = "flex";
+        tab.querySelector('.tab-style__nav-btn').classList.add('activeStyleTab');
     }
+
+    var maybe = document.querySelector('.interesting');
+
+    if (tab.classList.contains('tab-style') || tab.classList.contains('tab-gallery') || tab.classList.contains('tab-stock') || tab.classList.contains('tab-progress') || tab.classList.contains('tab-partners') || tab.classList.contains('tab-calc')) {
+        maybe.style.display = "none"
+    } else {
+        maybe.style.display = "block"
+    }
+
+}
+
+function openTabInside(evt, tabName) {
+    var tabcontentInside = document.getElementsByClassName("tabcontent-1");
+        for (i = 0; i < tabcontentInside.length; i++) {
+            tabcontentInside[i].style.display = "none";
+        }
+        var tablinksInside = document.getElementsByClassName("tablinks-1");
+        for (i = 0; i < tablinksInside.length; i++) {
+            tablinksInside[i].className = tablinksInside[i].className.replace(" activeInsideTab", "");
+        }
+        var tabInside = document.getElementById(tabName);
+        tabInside.style.display = "flex";
+        evt.currentTarget.className += " activeInsideTab";
+}
+
+function styleNav(evt, tabName) {
+    var tabcontentStyle = document.getElementsByClassName("tabcontentStyle");
+        for (i = 0; i < tabcontentStyle.length; i++) {
+            tabcontentStyle[i].style.display = "none";
+        }
+        var tablinksStyle = document.getElementsByClassName("tab-style__nav-btn");
+        for (i = 0; i < tablinksStyle.length; i++) {
+            tablinksStyle[i].className = tablinksStyle[i].className.replace(" activeStyleTab", "");
+        }
+        var tabStyle = document.getElementById(tabName);
+        tabStyle.style.display = "flex";
+        evt.currentTarget.className += " activeStyleTab";
+
+        tabStyle.querySelector('.tabcontent-1').style.display = "flex";
+        tabStyle.querySelector('.tablinks-1').classList.add('activeInsideTab');
+
 }
 
 // Get the element with id="defaultOpen" and click on it

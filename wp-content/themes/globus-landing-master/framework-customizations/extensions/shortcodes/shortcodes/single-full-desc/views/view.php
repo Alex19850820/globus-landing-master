@@ -67,82 +67,217 @@
 	<div class="tab-partners tabcontent" id="tab-partners">
 
 		<div class="tab-partners__content-wrap tabcontent" id="tab-partners-1">
-			<div class="tab-partners__content">
+			<div class="tab-partners__content tab-partners__content-blocks">
 				<div class="tab-partners__content-block tab-partners__content-block_small">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/docs.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Заявка на ипотеку</a>
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="img/baby.svg" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/baby.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Материнский	капитал</a>
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="img/captain.svg" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/captain.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Военная ипотека</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img small" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
-				</div>
-
-				<div class="tab-partners__content-block">
-					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-					</a>
 				</div>
 			</div>
 
-			<nav class="nav-local">
-				<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-1')" id="partnertsDefault">1</button>
-				<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-2')">2</button>
-			</nav>
-		</div>
+			<div class="tab-partners__content">
 
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-partners__content-block">
+					<div class="tab-partners__content-block-top">
+						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<div class="tab-partners__content-text">
+							<span class="tab-partners__content-text-name">МКБ</span>
+							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+							<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+						</div>
+					</div>
+					<div class="tab-partners__content-block-bottom">
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Ставка</span>
+							<span class="tab-partners__content-label-body">9,99%</span>
+						</div>
+						<div class="tab-partners__content-label">
+							<span class="tab-partners__content-label-title">Срок до</span>
+							<span class="tab-partners__content-label-body">20 лет</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="tab-partners__content-wrap tabcontent" id="tab-partners-2">
 			<div class="tab-partners__content">
 				<div class="tab-partners__content-block tab-partners__content-block_small">
@@ -219,9 +354,15 @@
 				<button class="tab__nav-btn tablinks" type="button"onclick="openTab(event, 'tab-partners-2')">2</button>
 			</nav>
 		</div>
+		
+		<nav class="nav-local">
+			<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-1')" id="partnertsDefault">1</button>
+			<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-2')">2</button>
+		</nav>
 
 	</div>
 	<!-- end tab-partners.html-->
+	<div class="tab-apartment" id="tab-apartment"></div>
 	<!-- start tab-style.html-->
 	<div class="tab-style tabcontent" id="tab-style">
 		<div class="tab-style__nav-global">
@@ -411,6 +552,7 @@
 		</nav>
 	</div>
 	<!-- end tab-progress.html-->
+	<div class="tab-gallery" id="tab-gallery"></div>
 	<!-- start tab-stock.html-->
 	<div class="tab-stock tabcontent" id="tab-stock">
 		<div class="tab-stock__content">
@@ -508,5 +650,6 @@
 		</nav>
 	</div>
 	<!-- end tab-stock.html-->
+	<div class="tab-calc" id="tab-calc"></div>
 </section>
 <!-- end inside-full-desc.html-->
