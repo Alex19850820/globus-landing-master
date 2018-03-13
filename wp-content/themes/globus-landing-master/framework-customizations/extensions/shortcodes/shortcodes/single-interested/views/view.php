@@ -24,8 +24,8 @@
 				<a href="<?php the_permalink(); ?>">
 					<div class="build__img" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
 				</a>
-				<div class="build__desc">
-					<h2 class="build__title"><?php the_title(); ?></h2>
+				< class="build__desc">
+				<h2 class="build__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<div class="build__desc-wrap">
 						<div class="build__location">
 							<span><?=$atts[$i]['city']?></span>

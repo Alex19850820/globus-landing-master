@@ -8,6 +8,7 @@
  *
  * @package globus-landing-master
  */
+$menu = fw_get_db_customizer_option();
 
 ?>
 <!doctype html>
@@ -29,30 +30,30 @@
 		<img src="img/logo.png" alt="">
 	</a>
 	<div class="sidebar__phone-number">
-		<a href="tel:+7(499)390-55-71">+7(499)390-55-71</a>
+		<a href="tel:<?=$menu['phone']?>"><?=$menu['phone']?></a>
 	</div>
-	<a href="#" class="sidebar__discount-btn">получить сКИдку</a>
-	<a href="#" class="sidebar__feedback">Заказать звонок</a>
+	<a href="<?=$menu['hrefd']?>" class="sidebar__discount-btn"><?=$menu['discount']?></a>
+	<a href="<?=$menu['href_order']?>" class="sidebar__feedback"><?=$menu['order']?></a>
 	<ul class="header__nav">
-		<li><a href="#">Новостройки</a></li>
-		<li><a href="#">Городская недвижимость</a></li>
-		<li><a href="#">Загородная недвижимость</a></li>
-		<li><a href="#">Скидки на новостройки</a></li>
+		<li><a href="<?=$menu['href']?>"><?=$menu['text']?></a></li>
+		<li><a href="<?=$menu['href2']?>"><?=$menu['text2']?></a></li>
+		<li><a href="<?=$menu['href3']?>"><?=$menu['text3']?></a></li>
+		<li><a href="<?=$menu['href4']?>"><?=$menu['text4']?></a></li>
 	</ul>
 	<ul class="sidebar__nav">
-		<li><a href="#">Ипотека</a></li>
-		<li><a href="#">Инвестиции</a></li>
-		<li><a href="#">О компании</a></li>
-		<li><a href="#">Застройщикам</a></li>
-		<li><a href="#">Контакты</a></li>
+		<li><a href="<?=$menu['href_mortgage']?>"><?=$menu['mortgage']?></a></li>
+		<li><a href="<?=$menu['href_investments']?>"><?=$menu['investments']?></a></li>
+		<li><a href="<?=$menu['href_about']?>"><?=$menu['about']?></a></li>
+		<li><a href="<?=$menu['href_build']?>"><?=$menu['build']?></a></li>
+		<li><a href="<?=$menu['href_contacts']?>"><?=$menu['contacts']?></a></li>
 	</ul>
 	<div class="sidebar__socials">
-		<a href="#"><i class="fab fa-vk"></i></a>
-		<a href="#"><i class="fab fa-facebook-f"></i></a>
-		<a href="#"><i class="fab fa-instagram"></i></a>
-		<a href="#"><i class="fab fa-google-plus-g"></i></a>
-		<a href="#"><i class="fab fa-youtube"></i></a>
-		<a href="#"><i class="fab fa-twitter"></i></a>
+		<a href="<?=$menu['vk']?>"><i class="fab fa-vk"></i></a>
+		<a href="<?=$menu['facebook']?>"><i class="fab fa-facebook-f"></i></a>
+		<a href="<?=$menu['instagram']?>"><i class="fab fa-instagram"></i></a>
+		<a href="<?=$menu['google_plus']?>"><i class="fab fa-google-plus-g"></i></a>
+		<a href="<?=$menu['youtube']?>"><i class="fab fa-youtube"></i></a>
+		<a href="<?=$menu['twitter']?>"><i class="fab fa-twitter"></i></a>
 	</div>
 </aside>
 <!-- end main-sidebar.html-->
@@ -62,10 +63,10 @@
 	<header class="header">
 
 		<ul class="header__nav">
-			<li><a href="new-buildings.html">Новостройки</a></li>
-			<li><a href="#">Городская недвижимость</a></li>
-			<li><a href="#">Загородная недвижимость</a></li>
-			<li><a href="#">Скидки на новостройки</a></li>
+			<li><a href="<?=$menu['href']?>"><?=$menu['text']?></a></li>
+			<li><a href="<?=$menu['href2']?>"><?=$menu['text2']?></a></li>
+			<li><a href="<?=$menu['href3']?>"><?=$menu['text3']?></a></li>
+			<li><a href="<?=$menu['href4']?>"><?=$menu['text4']?></a></li>
 		</ul>
 
 		<div class="menu btn5" data-menu="5">

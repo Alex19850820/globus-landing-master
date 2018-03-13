@@ -17,7 +17,17 @@ $options = [
 			'email' => [
 				'type'  => 'text',
 				'label' => __( 'E-mail', '{domain}' ),
-				'value' => '',
+				'value' => 'info@globusestate.ru',
+			],
+			'time' => [
+				'type'  => 'text',
+				'label' => __( 'Время работы', '{domain}' ),
+				'value' => 'Пн-пт: с 8:00 до 22:00',
+			],
+			'address' => [
+				'type'  => 'text',
+				'label' => __( 'Время работы', '{domain}' ),
+				'value' => '141407, г. Москва, <br>ул. Кронштадский бул.,  д.6, корп. 5',
 			],
 			'vk' => [
 				'type'  => 'text',
@@ -29,35 +39,150 @@ $options = [
 				'label' => __( 'Facebook', '{domain}' ),
 				'value' => '',
 			],
-			'telegram' => [
+			'instagram' => [
 				'type'  => 'text',
-				'label' => __( 'Telegram', '{domain}' ),
+				'label' => __( 'Instagram', '{domain}' ),
 				'value' => '',
 			],
-			'whatsapp' => [
+			'google_plus' => [
 				'type'  => 'text',
-				'label' => __( 'Whatsapp', '{domain}' ),
+				'label' => __( 'Google +', '{domain}' ),
 				'value' => '',
 			],
-			'viber' => [
+			'youtube' => [
 				'type'  => 'text',
-				'label' => __( 'Viber', '{domain}' ),
+				'label' => __( 'Youtube', '{domain}' ),
+				'value' => '',
+			],
+			'twitter' => [
+				'type'  => 'text',
+				'label' => __( 'Twitter', '{domain}' ),
 				'value' => '',
 			],
 		],
 	],
 	'panel_h' => [
-		'title'   => __( 'Заголовок', '{domain}' ),
+		'title'   => __( 'Верхнее меню', '{domain}' ),
 		'options' => [
 			'text' => [
 				'type'  => 'text',
-				'label' => __( 'Заголовок', '{domain}' ),
-				'value' => '',
+				'label' => __( 'Меню1', '{domain}' ),
+				'value' => 'Новостройки',
+			],
+			'href' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
 			],
 			'text2' => [
 				'type'  => 'text',
-				'label' => __( 'Заголовок2', '{domain}' ),
-				'value' => '',
+				'label' => __( 'Меню2', '{domain}' ),
+				'value' => 'Городская недвижимость',
+			],
+			'href2' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'text3' => [
+				'type'  => 'text',
+				'label' => __( 'Меню3', '{domain}' ),
+				'value' => 'Загородная недвижимость',
+			],
+			'href3' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'text4' => [
+				'type'  => 'text',
+				'label' => __( 'Меню4', '{domain}' ),
+				'value' => 'Скидки на новостройки',
+			],
+			'href4' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+		],
+	],
+	'panel_l' => [
+		'title'   => __( 'Боковое меню', '{domain}' ),
+		'options' => [
+			'phone' => [
+				'type'  => 'text',
+				'label' => __( 'Телефон', '{domain}' ),
+				'value' => '+7(499)390-55-71',
+			],
+			'discount' => [
+				'type'  => 'text',
+				'label' => __( 'Текст кнопки', '{domain}' ),
+				'value' => 'получить сКИдку',
+			],
+			'hrefd' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'order' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Заказать звонок',
+			],
+			'href_order' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'mortgage' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Ипотека',
+			],
+			'href_mortgage' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'investments' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Инвестиции',
+			],
+			'href_investments' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'about' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'О компании',
+			],
+			'href_about' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'build' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Застройщикам',
+			],
+			'href_build' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+			'contacts' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Контакты',
+			],
+			'href_contacts' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
 			],
 		],
 	],
