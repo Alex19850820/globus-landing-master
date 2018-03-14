@@ -28,15 +28,14 @@
 				<h2 class="build__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<div class="build__desc-wrap">
 					<div class="build__location">
-						<span><?=$atts[$i]['city']?></span>
-						<?=$atts[$i]['city']?>
-						<?php if(isset($atts[$i]['md'])):?>
-							<?=$atts[$i]['md']?>
+						<span><?=fw_get_db_post_option($blogQuery->post->ID, 'city')?></span>
+						<?php if(fw_get_db_post_option($blogQuery->post->ID, 'md')):?>
+							<?=fw_get_db_post_option($blogQuery->post->ID, 'md')?>
 						<?php endif;?>
 					</div>
 					<div class="build__price">
-						<span><?=$atts['house'][$i]['price']?></span>
-						Срок сдачи: <?=$atts['house'][$i]['area']?>
+						<span><?=fw_get_db_post_option($blogQuery->post->ID, 'price')?></span>
+						Срок сдачи: <?=fw_get_db_post_option($blogQuery->post->ID, 'period')?>
 					</div>
 				</div>
 <!--				</div>-->
@@ -46,8 +45,8 @@
 
 	<div class="partners__contacts" style="margin-top: 40px">
 		<span>Узнать больше по телефону:</span>
-		<a href="tel:+74993905571" class="btn-phone"><span>+7 (499) 390-55-71</span></a>
-		<a href="#" class="sidebar__feedback">Заказать обратный звонок</a>
+		<a href="tel:<?=$atts['hphone']?>" class="btn-phone"><span><?=$atts['phone']?></span></a>
+		<a href="<?=$atts['href']?>" class="sidebar__feedback">Заказать обратный звонок</a>
 	</div>
 
 </section>

@@ -186,6 +186,26 @@ $options = [
 			],
 		],
 	],
+	'footer' => [
+		'title'   => __( 'Футер', '{domain}' ),
+		'options' => [
+			'more' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Узнать больше по телефону:',
+			],
+			'order' => [
+				'type'  => 'text',
+				'label' => __( 'Текст', '{domain}' ),
+				'value' => 'Заказать обратный звонок',
+			],
+			'horder' => [
+				'type'  => 'text',
+				'label' => __( 'Ссылка', '{domain}' ),
+				'value' => '#',
+			],
+		],
+	],
 ];
 
 

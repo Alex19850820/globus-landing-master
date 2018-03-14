@@ -24,46 +24,62 @@ $options = [
 		'value' => 'Наша миссия - Ваша красота',
 		'label' => __('Заголовок поста', '{domain}'),
 	],*/
-	'house' => [
-		'type' => 'addable-popup',
-		'label' => __('Добавить информацию', '{domain}'),
-		'template' => '{{- city }}',
-		'size' => 'large', // small, medium, large
-		'limit' => 0, // limit the number of popup`s that can be added
-		'add-button-text' => __('добавить', '{domain}'),
-		'sortable' => true,
-		'popup-options' => [
-//			'img'     => [
-//				'type'  => 'upload',
-//				'value' => '',
-//				'label' => __('Добавить картинку здания', '{domain}'),
-//				'images_only' => true,
-//			],
-//			'h2'     => [
+//	'house' => [
+//		'type' => 'addable-popup',
+//		'label' => __('Добавить информацию', '{domain}'),
+//		'template' => '{{- city }}',
+//		'size' => 'large', // small, medium, large
+//		'limit' => 0, // limit the number of popup`s that can be added
+//		'add-button-text' => __('добавить', '{domain}'),
+//		'sortable' => true,
+//		'popup-options' => [
+////			'img'     => [
+////				'type'  => 'upload',
+////				'value' => '',
+////				'label' => __('Добавить картинку здания', '{domain}'),
+////				'images_only' => true,
+////			],
+////			'h2'     => [
+////				'type'  => 'text',
+////				'value' => '',
+////				'label' => __('Заголовок', '{domain}'),
+////			],
+//			'price'     => [
 //				'type'  => 'text',
-//				'value' => '',
-//				'label' => __('Заголовок', '{domain}'),
+//				'value' => 'от <b>900</b> тыс. руб.',
+//				'label' => __('Цена', '{domain}'),
 //			],
-			'price'     => [
-				'type'  => 'text',
-				'value' => 'от <b>900</b> тыс. руб.',
-				'label' => __('Цена', '{domain}'),
-			],
-			'area'     => [
-				'type'  => 'text',
-				'value' => '2кв. 2018г.',
-				'label' => __('Цена за кв метр', '{domain}'),
-			],
-			'city'     => [
-				'type'  => 'text',
-				'value' => 'Видное',
-				'label' => __('Город', '{domain}'),
-			],
-			'md'     => [
-				'type'  => 'text',
-				'value' => 'м. Домодедовская',
-				'label' => __('Микрорайон', '{domain}'),
-			],
-		],
+//			'area'     => [
+//				'type'  => 'text',
+//				'value' => '2кв. 2018г.',
+//				'label' => __('Цена за кв метр', '{domain}'),
+//			],
+//			'city'     => [
+//				'type'  => 'text',
+//				'value' => 'Видное',
+//				'label' => __('Город', '{domain}'),
+//			],
+//			'md'     => [
+//				'type'  => 'text',
+//				'value' => 'м. Домодедовская',
+//				'label' => __('Микрорайон', '{domain}'),
+//			],
+//		],
+//	],
+	'phone'     => [
+		'type'  => 'text',
+		'value' => '+7 (499) 390-55-71',
+		'label' => __('Заголовок', '{domain}'),
 	],
+	'hphone'     => [
+		'type'  => 'text',
+		'value' => '+74993905571',
+		'label' => __('Заголовок', '{domain}'),
+	],
+	'href'     => [
+		'type'  => 'text',
+		'value' => '#',
+		'label' => __('Сылка', '{domain}'),
+	],
+
 ];

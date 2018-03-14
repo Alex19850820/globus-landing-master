@@ -27,7 +27,7 @@ $menu = fw_get_db_customizer_option();
 <!-- start main-sidebar.html-->
 <aside class="sidebar">
 	<a href="/ " class="sidebar__logo">
-		<img src="img/logo.png" alt="">
+		<img src="<?php bloginfo('template_url')?>/img/logo.png" alt="">
 	</a>
 	<div class="sidebar__phone-number">
 		<a href="tel:<?=$menu['phone']?>"><?=$menu['phone']?></a>

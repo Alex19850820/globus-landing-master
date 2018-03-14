@@ -24,61 +24,61 @@ $options = [
 		'value' => 'Наша миссия - Ваша красота',
 		'label' => __('Заголовок поста', '{domain}'),
 	],*/
-	'house' => [
-		'type' => 'addable-popup',
-		'label' => __('Добавить информацию', '{domain}'),
-		'template' => '{{- h2 }}',
-		'size' => 'large', // small, medium, large
-		'limit' => 0, // limit the number of popup`s that can be added
-		'add-button-text' => __('добавить', '{domain}'),
-		'sortable' => true,
-		'popup-options' => [
-//			'img'     => [
-//				'type'  => 'upload',
-//				'value' => '',
-//				'label' => __('Добавить картинку здания', '{domain}'),
-//				'images_only' => true,
+//	'house' => [
+//		'type' => 'addable-popup',
+//		'label' => __('Добавить информацию', '{domain}'),
+//		'template' => '{{- h2 }}',
+//		'size' => 'large', // small, medium, large
+//		'limit' => 0, // limit the number of popup`s that can be added
+//		'add-button-text' => __('добавить', '{domain}'),
+//		'sortable' => true,
+//		'popup-options' => [
+////			'img'     => [
+////				'type'  => 'upload',
+////				'value' => '',
+////				'label' => __('Добавить картинку здания', '{domain}'),
+////				'images_only' => true,
+////			],
+////			'h2'     => [
+////				'type'  => 'text',
+////				'value' => '',
+////				'label' => __('Заголовок', '{domain}'),
+////			],
+//			'price'     => [
+//				'type'  => 'text',
+//				'value' => 'от <span>2</span> млн. руб.',
+//				'label' => __('Цена', '{domain}'),
 //			],
-//			'h2'     => [
+//			'area'     => [
+//				'type'  => 'text',
+//				'value' => 'от 184 500 р./м<sup>2</sup>',
+//				'label' => __('Цена за кв метр', '{domain}'),
+//			],
+//			'city'     => [
 //				'type'  => 'text',
 //				'value' => '',
-//				'label' => __('Заголовок', '{domain}'),
+//				'label' => __('Город', '{domain}'),
 //			],
-			'price'     => [
-				'type'  => 'text',
-				'value' => 'от <span>2</span> млн. руб.',
-				'label' => __('Цена', '{domain}'),
-			],
-			'area'     => [
-				'type'  => 'text',
-				'value' => 'от 184 500 р./м<sup>2</sup>',
-				'label' => __('Цена за кв метр', '{domain}'),
-			],
-			'city'     => [
-				'type'  => 'text',
-				'value' => '',
-				'label' => __('Город', '{domain}'),
-			],
-			'md'     => [
-				'type'  => 'text',
-				'value' => '',
-				'label' => __('Микрорайон', '{domain}'),
-			],
-			'info'     => [
-				'type'  => 'text',
-				'value' => '',
-				'label' => __('Текст ссылки', '{domain}'),
-				'desc'  => __('Подробнее или еще или узнать больше...', '{domain}'),
-				'help'  => __('Введите текст', '{domain}'),
-			],
-			'href'     => [
-				'type'  => 'text',
-				'value' => '',
-				'label' => __('Ссылка', '{domain}'),
-				'desc'  => __('Введите адрес на который будет ссылаться страница', '{domain}'),
-				'help'  => __('Введите страницу', '{domain}'),
-			],
-		],
-	],
-	
+//			'md'     => [
+//				'type'  => 'text',
+//				'value' => '',
+//				'label' => __('Микрорайон', '{domain}'),
+//			],
+//			'info'     => [
+//				'type'  => 'text',
+//				'value' => '',
+//				'label' => __('Текст ссылки', '{domain}'),
+//				'desc'  => __('Подробнее или еще или узнать больше...', '{domain}'),
+//				'help'  => __('Введите текст', '{domain}'),
+//			],
+//			'href'     => [
+//				'type'  => 'text',
+//				'value' => '',
+//				'label' => __('Ссылка', '{domain}'),
+//				'desc'  => __('Введите адрес на который будет ссылаться страница', '{domain}'),
+//				'help'  => __('Введите страницу', '{domain}'),
+//			],
+//		],
+//	],
+//
 ];

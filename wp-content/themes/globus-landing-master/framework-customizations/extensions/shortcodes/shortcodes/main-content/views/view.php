@@ -14,22 +14,22 @@
 
 <!-- start content.html-->
 <main class="housing">
-	<?php $i = 0; while ( $blogQuery->have_posts() ) { $blogQuery->the_post();  ?>
-			<div class="housing__item" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
-				<div class="housing__content">
-					<h2 class="housing__title"><?php the_title(); ?></h2>
-					<div>
-						<div class="housing__price"><?=$atts['house'][$i]['price']?></div>
-						<div class="housing__area"><?=$atts['house'][$i]['area']?></div>
-					</div>
-					<div class="housing__city">
-						<?=$atts['house'][$i]['city']?>
-						<?php if(isset($atts['house'][$i]['md'])):?>
-							<span> <?=$atts['house'][$i]['md']?></span>
-						<?php endif;?>
-					</div>
+	<?php while ( $blogQuery->have_posts() ) { $blogQuery->the_post();?>
+		<div class="housing__item" style="background-image: url(<?php the_post_thumbnail_url(); ?>)">
+			<div class="housing__content">
+				<h2 class="housing__title"><?php the_title(); ?></h2>
+				<div>
+					<div class="housing__price"><?=fw_get_db_post_option($blogQuery->post->ID, 'price')?></div>
+					<div class="housing__area"><?=fw_get_db_post_option($blogQuery->post->ID, 'price2')?></div>
 				</div>
-				<a href="<?php the_permalink(); ?>" class="btn-white"><?=$atts['house'][$i]['info']?></a>
+				<div class="housing__city">
+					<?=fw_get_db_post_option($blogQuery->post->ID, 'city')?>
+					<?php if(fw_get_db_post_option($blogQuery->post->ID, 'md')):?>
+						<span> <?=fw_get_db_post_option($blogQuery->post->ID, 'md')?></span>
+					<?php endif;?>
+				</div>
 			</div>
-	<?php $i++; } ?>
+			<a href="<?php the_permalink(); ?>" class="btn-white"><?=fw_get_db_post_option($blogQuery->post->ID, 'text2')?></a>
+		</div>
+	<?php } ?>
 	<!--textblock in wp then shortcode main-content2-->

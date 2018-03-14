@@ -69,17 +69,17 @@
 		<div class="tab-partners__content-wrap tabcontent" id="tab-partners-1">
 			<div class="tab-partners__content tab-partners__content-blocks">
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/docs.png" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('template_url')?>/img/docs.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Заявка на ипотеку</a>
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/baby.png" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('template_url')?>/img/baby.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Материнский	капитал</a>
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('templateurl')?>/img/captain.png" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('template_url')?>/img/captain.png" alt="">
 					<a class="tab-partners__content-btn" href="#">Военная ипотека</a>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -110,7 +110,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -131,7 +131,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -152,7 +152,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -173,7 +173,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -194,7 +194,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -215,7 +215,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -236,7 +236,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -257,7 +257,7 @@
 
 				<div class="tab-partners__content-block">
 					<div class="tab-partners__content-block-top">
-						<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.png" alt="">
 						<div class="tab-partners__content-text">
 							<span class="tab-partners__content-text-name">МКБ</span>
 							<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
@@ -285,66 +285,66 @@
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="img/baby.svg" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('template_url')?>/img/baby.svg" alt="">
 					<a class="tab-partners__content-btn" href="#">Материнский	капитал</a>
 				</div>
 
 				<div class="tab-partners__content-block tab-partners__content-block_small">
-					<img class="tab-partners__content-img tab-partners__content-img_small" src="img/captain.svg" alt="">
+					<img class="tab-partners__content-img tab-partners__content-img_small" src="<?php bloginfo('template_url')?>/img/captain.svg" alt="">
 					<a class="tab-partners__content-btn" href="#">Военная ипотека</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img small" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img small" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 
 				<div class="tab-partners__content-block">
 					<a class="tab-partners__content-link" href="#">
-						<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
+						<img class="tab-partners__content-img" src="<?php bloginfo('template_url')?>/img/mkb.jpg" alt="">
 					</a>
 				</div>
 			</div>
@@ -378,48 +378,48 @@
 		<div class="tab-style__content">
 			<div class="tab-style__content-blocks">
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
-						<img class="tab-style__content-img" src="img/style/01.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/01.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/01.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
 				</div>
 
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
-						<img class="tab-style__content-img" src="img/style/02.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/02.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/02.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
 				</div>
 
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
-						<img class="tab-style__content-img" src="img/style/03.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/03.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/03.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
 				</div>
 
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
-						<img class="tab-style__content-img" src="img/style/01.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/01.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/01.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
 				</div>
 
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
-						<img class="tab-style__content-img" src="img/style/02.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/02.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/02.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
 				</div>
 
 				<div class="tab-style__content-block">
-					<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
-						<img class="tab-style__content-img" src="img/style/03.jpg">
+					<a class="tab-style__content-link" data-fancybox="gallery-style" href="<?php bloginfo('template_url')?>/img/style/03.jpg">
+						<img class="tab-style__content-img" src="<?php bloginfo('template_url')?>/img/style/03.jpg">
 					</a>
 
 					<p class="tab-style__content-caption">Стиль отделки Americano</p>
@@ -438,8 +438,8 @@
 	<div class="tab-progress tabcontent" id="tab-progress">
 		<div class="tab-progress__content">
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
-					<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/01.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/01.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -450,8 +450,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
-					<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/02.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/02.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -462,8 +462,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
-					<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/03.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/03.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -474,8 +474,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
-					<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/01.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/01.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -486,8 +486,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
-					<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/02.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/02.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -498,8 +498,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
-					<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/03.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/03.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -510,8 +510,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
-					<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/01.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/01.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -522,8 +522,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
-					<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/02.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/02.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -534,8 +534,8 @@
 			</div>
 
 			<div class="tab-progress__block">
-				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
-					<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+				<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="<?php bloginfo('template_url')?>/img/progress/03.jpg">
+					<img class="tab-progress__content-img" src="<?php bloginfo('template_url')?>/img/progress/03.jpg" alt="">
 				</a>
 
 				<div class="tab-progress__block-desc">
@@ -558,7 +558,7 @@
 		<div class="tab-stock__content">
 			<div class="tab-stock__block">
 				<a class="tab-stock__link" data-fancybox data-src="#stock1" href="javascript:;">
-					<img class="tab-stock__img" src="img/stock/01.jpg" alt="">
+					<img class="tab-stock__img" src="<?php bloginfo('template_url')?>/img/stock/01.jpg" alt="">
 				</a>
 
 				<div class="tab-stock__desc">
@@ -570,7 +570,7 @@
 
 					<div class="stock__modal" id="stock1">
 						<div class="stock__modal-wrap">
-							<img class="stock__modal-img" src="img/stock/01.jpg" alt="">
+							<img class="stock__modal-img" src="<?php bloginfo('template_url')?>/img/stock/01.jpg" alt="">
 							<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
 						</div>
 					</div>
@@ -579,7 +579,7 @@
 
 			<div class="tab-stock__block">
 				<a class="tab-stock__link" data-fancybox data-src="#stock2" href="javascript:;">
-					<img class="tab-stock__img" src="img/stock/02.jpg" alt="">
+					<img class="tab-stock__img" src="<?php bloginfo('template_url')?>/img/stock/02.jpg" alt="">
 				</a>
 
 				<div class="tab-stock__desc">
@@ -591,7 +591,7 @@
 
 					<div class="stock__modal" id="stock2">
 						<div class="stock__modal-wrap">
-							<img class="stock__modal-img" src="img/stock/02.jpg" alt="">
+							<img class="stock__modal-img" src="<?php bloginfo('template_url')?>/img/stock/02.jpg" alt="">
 							<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
 						</div>
 
@@ -601,7 +601,7 @@
 
 			<div class="tab-stock__block">
 				<a class="tab-stock__link" data-fancybox data-src="#stock3" href="javascript:;">
-					<img class="tab-stock__img" src="img/stock/03.jpg" alt="">
+					<img class="tab-stock__img" src="<?php bloginfo('template_url')?>/img/stock/03.jpg" alt="">
 				</a>
 
 				<div class="tab-stock__desc">
@@ -613,7 +613,7 @@
 
 					<div class="stock__modal" id="stock3">
 						<div class="stock-modal-wrap">
-							<img class="stock__modal-img" src="img/stock/03.jpg" alt="">
+							<img class="stock__modal-img" src="<?php bloginfo('template_url')?>/img/stock/03.jpg" alt="">
 							<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
 						</div>
 
@@ -623,7 +623,7 @@
 
 			<div class="tab-stock__block">
 				<a class="tab-stock__link" data-fancybox data-src="#stock4" href="javascript:;">
-					<img class="tab-stock__img" src="img/stock/01.jpg" alt="">
+					<img class="tab-stock__img" src="<?php bloginfo('template_url')?>/img/stock/01.jpg" alt="">
 				</a>
 
 				<div class="tab-stock__desc">
@@ -635,7 +635,7 @@
 
 					<div class="stock__modal" id="stock4">
 						<div class="stock__modal-wrap">
-							<img class="stock__modal-img" src="img/stock/01.jpg" alt="">
+							<img class="stock__modal-img" src="<?php bloginfo('template_url')?>/img/stock/01.jpg" alt="">
 							<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
 						</div>
 

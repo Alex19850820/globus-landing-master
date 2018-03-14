@@ -18,9 +18,9 @@
 		<?php endforeach;?>
 	</div>
 	<div class="partners__contacts">
-		<span><?=$atts['title']?>Узнать больше по телефону:</span>
+		<span><?=$atts['title']?></span>
 		<a href="tel:<?=$atts['href']?>" class="btn-phone"><span><?=$atts['phone']?></span></a>
-		<a href="<?=$atts['href2']?>" class="sidebar__feedback"><?=$atts['text']?></a>
+		<a href="<?=$atts['href2']?>" class="sidebar__feedback"><?=$atts['info']?></a>
 	</div>
 </section>
 <!-- end partners.html-->

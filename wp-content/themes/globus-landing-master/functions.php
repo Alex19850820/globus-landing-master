@@ -160,9 +160,23 @@ function globus_landing_master_scripts() {
 	wp_enqueue_script( 'globus-landing-master-js-owl-car', get_template_directory_uri() . '/js/owl.carousel.min.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-js-all', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-js-jsmin', get_template_directory_uri() . '/js/script.min.js', [], '', true );
+	wp_enqueue_script( 'globus-landing-master-script_form', get_template_directory_uri() . '/js/script_form.js', [], '', true );
 	/*wp_enqueue_script( 'globus-landing-master-js-jq', get_template_directory_uri() . '/js/jquery-3.2.1.js', [], '', true );*/
 	
-	
+	/*
+    * Добавляем возможность отправлять AJAX-запросы к скриптам
+    * Аргументы:
+    * 1) название скрипта, в котором будем писать ajax
+    * 2) название объекта, к которому будем обращаться в файле скрипта
+    * 3) элементы объекта, которые нам нужны (путь к обработчику аякса, путь к папке темы)
+    */
+	wp_localize_script( 'globus-landing-master-script_form', 'myajax',
+		[
+			'url' => admin_url( 'admin-ajax.php' ),
+			'template' => get_template_directory_uri()
+		]
+	);
+
 	
 
 	wp_enqueue_script( 'globus-landing-master-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -170,19 +184,7 @@ function globus_landing_master_scripts() {
 	wp_enqueue_script( 'globus-landing-master-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	
 	
-	/*
- * Добавляем возможность отправлять AJAX-запросы к скриптам
- * Аргументы:
- * 1) название скрипта, в котором будем писать ajax
- * 2) название объекта, к которому будем обращаться в файле скрипта
- * 3) элементы объекта, которые нам нужны (путь к обработчику аякса, путь к папке темы)
- */
-	wp_localize_script( 'globus-landing-master-script', 'myajax',
-		[
-			'url' => admin_url( 'admin-ajax.php' ),
-			'template' => get_template_directory_uri()
-		]
-	);
+	
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -190,6 +192,12 @@ function globus_landing_master_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'globus_landing_master_scripts' );
+
+/**
+ * Load custom functions
+ */
+require get_template_directory() . '/includes/custom-functions.php';
+
 
 /**
  * Implement the Custom Header feature.
@@ -222,4 +230,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Load custom functions
  */
 //require get_template_directory() . '/includes/custom-functions.php';
+//count posts
+function get_posts_count_per_cat($cat = 0) {
+	global $wpdb;
+	return $wpdb->get_var("select count from $wpdb->term_taxonomy where term_id = $cat");
+}
 
+//post option
+function _action_theme_wp_print_styles() {
+	if (!defined('FW')) return; // prevent fatal error when the framework is not active
+	
+	global $post;
+	
+	if (!$post || $post->post_type != 'post') {
+		return;
+	}
+	
+	$option_value = fw_get_db_post_option($post->ID, 'body-color');
+	
+	echo '<style type="text/css">'
+	     . 'body { '
+	     . 'border: 30px solid '. esc_html($option_value) .'; '
+	     . '}'
+	     . '</style>';
+}
+add_action('wp_print_styles', '_action_theme_wp_print_styles');
