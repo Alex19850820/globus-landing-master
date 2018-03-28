@@ -12,5 +12,4 @@
 <main>
 	<?php the_content(); ?>
 </main>
-
 <!-- end content.html-->

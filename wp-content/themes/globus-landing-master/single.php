@@ -12,9 +12,10 @@ get_header();
 <!-- start inside-crumbs.html-->
 <section class="crumbs">
 	<ul class="crumbs__link">
-		<li><a href="/">Главная <i class="fas fa-chevron-right"></i> </a> </li>
-		<li><a href="new-buildings.html">Новостройки Москвы и МО <i class="fas fa-chevron-right"></i></a></li>
-		<li><a href="#"><?php the_title(); ?></a></li>
+<!--		<li><a href="/">Главная <i class="fas fa-chevron-right"></i> </a> </li>-->
+<!--		<li><a href="/new-buildings">Новостройки Москвы и МО <i class="fas fa-chevron-right"></i></a></li>-->
+<!--		<li><a href="#">--><?php //the_title(); ?><!--</a></li>-->
+		<?php echo fw_ext_get_breadcrumbs('<i class="fas fa-chevron-right"></i>');?>
 	</ul>
 </section>
 <!-- end inside-crumbs.html-->

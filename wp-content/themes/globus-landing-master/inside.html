@@ -39,7 +39,7 @@
         <li><a href="#">Инвестиции</a></li>
         <li><a href="#">О компании</a></li>
         <li><a href="#">Застройщикам</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
     </ul>
     <div class="sidebar__socials">
         <a href="#"><i class="fab fa-vk"></i></a>
@@ -56,16 +56,42 @@
 <!-- start header.html-->
 <header class="header">
 
-    <ul class="header__nav">
-        <li><a href="new-buildings.html">Новостройки</a></li>
-        <li><a href="#">Городская недвижимость</a></li>
-        <li><a href="#">Загородная недвижимость</a></li>
-        <li><a href="#">Скидки на новостройки</a></li>
-    </ul>
+	<ul class="header__nav">
+		<li><a class="header__nav-link" href="new-buildings.html">Новостройки</a></li>
+		<li>
+			<div class="filter__select_wrap" id="city">
+				<div  class="filter__select">
+					<span class="filter__select_active header__nav-link">Городская недвижимость</span>
+				</div>
 
-    <div class="menu btn5" data-menu="5">
-        <div class="icon"></div>
-    </div>
+				<ul class="filter__select_list">
+					<li><a class="header__nav-link header__nav-link_list" href="#">Элитные жилые комплексы</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Квартиры</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Апартаменты</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Лофты</a></li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="filter__select_wrap" id="out-of-town">
+				<div  class="filter__select">
+					<span class="filter__select_active header__nav-link">Загородная недвижимость</span>
+				</div>
+
+				<ul class="filter__select_list">
+					<li><a class="header__nav-link header__nav-link_list" href="#">Коттеджные поселки</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Загородные дома</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Таунхаусы</a></li>
+					<li><a class="header__nav-link header__nav-link_list" href="#">Участки</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a class="header__nav-link" href="#">Скидки на новостройки</a></li>
+	</ul>
+
+	<div class="menu btn5" data-menu="5">
+		<div class="icon"></div>
+	</div>
 </header>
 <!-- end header.html-->
 <!-- start inside-crumbs.html-->
@@ -137,14 +163,14 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')" id="default">Описание</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')">Описание</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-apartment')">Выбор квартиры</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-style')">Стиль отделки</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-gallery')">Галерея</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-stock')">Акции</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-progress')">Ход строительства</button></li>
 		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-partners')">Банки партнёры</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')">Ипотечный калькулятор</button></li>
+		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')" id="default">Ипотечный калькулятор</button></li>
 	</ul>
 
 	<div class="full-desc__content tabcontent" id="tab-describe">
@@ -185,87 +211,224 @@
 			</div>
 		</div>
 	</div>
+	
 <!-- start tab-partners.html-->
 <div class="tab-partners tabcontent" id="tab-partners">
 
-	<div class="tab-partners__content-wrap tabcontent" id="tab-partners-1">
-		<div class="tab-partners__content">
+	<div class="tab-partners__content-wrap tabcontent-1" id="tab-partners-1">
+
+		<div class="tab-partners__content tab-partners__content-blocks">
 			<div class="tab-partners__content-block tab-partners__content-block_small">
+				<img class="tab-partners__content-img tab-partners__content-img_small" src="img/docs.png" alt="">
 				<a class="tab-partners__content-btn" href="#">Заявка на ипотеку</a>
 			</div>
 
 			<div class="tab-partners__content-block tab-partners__content-block_small">
-				<img class="tab-partners__content-img tab-partners__content-img_small" src="img/baby.svg" alt="">
+				<img class="tab-partners__content-img tab-partners__content-img_small" src="img/baby.png" alt="">
 				<a class="tab-partners__content-btn" href="#">Материнский	капитал</a>
 			</div>
 
 			<div class="tab-partners__content-block tab-partners__content-block_small">
-				<img class="tab-partners__content-img tab-partners__content-img_small" src="img/captain.svg" alt="">
+				<img class="tab-partners__content-img tab-partners__content-img_small" src="img/captain.png" alt="">
 				<a class="tab-partners__content-btn" href="#">Военная ипотека</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img small" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
-			</div>
-
-			<div class="tab-partners__content-block">
-				<a class="tab-partners__content-link" href="#">
-					<img class="tab-partners__content-img" src="img/mkb.jpg" alt="">
-				</a>
 			</div>
 		</div>
 
-		<nav class="nav-local">
-			<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-1')" id="partnertsDefault">1</button>
-			<button class="nav-local__btn tablinks" type="button"onclick="openTab(event, 'tab-partners-2')">2</button>
-		</nav>
+		<div class="tab-partners__content">
+
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-partners__content-block">
+				<div class="tab-partners__content-block-top">
+					<img class="tab-partners__content-img" src="img/mkb.png" alt="">
+					<div class="tab-partners__content-text">
+						<span class="tab-partners__content-text-name">МКБ</span>
+						<span class="tab-partners__content-text-desc">Ипотека от 9,99% годовых</span>
+						<span class="tab-partners__content-text-foot">Генеральная лицензия Банка России №1978 от 6 мая 2015г</span>
+					</div>
+				</div>
+				<div class="tab-partners__content-block-bottom">
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Ставка</span>
+						<span class="tab-partners__content-label-body">9,99%</span>
+					</div>
+					<div class="tab-partners__content-label">
+						<span class="tab-partners__content-label-title">Срок до</span>
+						<span class="tab-partners__content-label-body">20 лет</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
-	<div class="tab-partners__content-wrap tabcontent" id="tab-partners-2">
+	<div class="tab-partners__content-wrap tabcontent-1" id="tab-partners-2">
 		<div class="tab-partners__content">
 			<div class="tab-partners__content-block tab-partners__content-block_small">
 				<a class="tab-partners__content-btn" href="#">Заявка на ипотеку</a>
@@ -335,35 +498,88 @@
 				</a>
 			</div>
 		</div>
-		
-		<nav class="tab-partners__nav">
-			<button class="tab__nav-btn tablinks" type="button"onclick="openTab(event, 'tab-partners-1')">1</button>
-			<button class="tab__nav-btn tablinks" type="button"onclick="openTab(event, 'tab-partners-2')">2</button>
-		</nav>
 	</div>
+
+	<nav class="nav-local">
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-partners-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-partners-2')">2</button>
+	</nav>
 	
 </div>
 <!-- end tab-partners.html-->
+
+	<div class="tab-apartment" id="tab-apartment"></div>
+
 <!-- start tab-style.html-->
 <div class="tab-style tabcontent" id="tab-style">
 	<div class="tab-style__nav-global">
-		<button class="tab-style__nav-btn tab-style__nav-btn_active tablinks" type="button">Americano</button>
-		<button class="tab-style__nav-btn tablinks" type="button">Арт-декор</button>
-		<button class="tab-style__nav-btn tablinks" type="button">Авангард</button>
-		<button class="tab-style__nav-btn tablinks" type="button">Классика</button>
-		<button class="tab-style__nav-btn tablinks" type="button">Latte</button>
-		<button class="tab-style__nav-btn tablinks" type="button">Mocco</button>
+		<button class="tab-style__nav-btn" type="button" onclick="styleNav(event, 'tab-style_americano')">Americano</button>
+		<button class="tab-style__nav-btn" type="button" onclick="styleNav(event, 'tab-style_decor')">Арт-декор</button>
+		<button class="tab-style__nav-btn" type="button" onclick="styleNav(event, 'tab-style_avangard')">Авангард</button>
+		<button class="tab-style__nav-btn" type="button">Классика</button>
+		<button class="tab-style__nav-btn" type="button">Latte</button>
+		<button class="tab-style__nav-btn" type="button">Mocco</button>
 	</div>
 
 <!-- start tab-style_americano.html-->
-<div class="tab-style__content">
-	<div class="tab-style__content-blocks">
+<div class="tab-style__content tabcontentStyle" id="tab-style_americano">
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_americano-1">
 		<div class="tab-style__content-block">
 			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
 				<img class="tab-style__content-img" src="img/style/01.jpg">
 			</a>
 
 			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano</p>
+		</div>
+	</div>
+
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_americano-2">
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Americano1</p>
 		</div>
 
 		<div class="tab-style__content-block">
@@ -408,16 +624,237 @@
 	</div>
 
 	<nav class="nav-local">
-		<button class="nav-local__btn tablinks" type="button">1</button>
-		<button class="nav-local__btn tablinks" type="button">2</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_americano-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_americano-2')">2</button>
 	</nav>
 </div>
 <!-- end tab-style_americano.html-->
+
+<!-- start tab-style_decor.html-->
+<div class="tab-style__content tabcontentStyle" id="tab-style_decor">
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_decor-1">
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+	</div>
+
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_decor-2">
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор1</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Арт-декор</p>
+		</div>
+	</div>
+
+	<nav class="nav-local">
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_decor-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_decor-2')">2</button>
+	</nav>
+</div>
+<!-- end tab-style_decor.html-->
+
+<!-- start tab-style_avangard.html-->
+<div class="tab-style__content tabcontentStyle" id="tab-style_avangard">
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_avangard-1">
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+	</div>
+
+	<div class="tab-style__content-blocks tabcontent-1" id="tab-style_avangard-2">
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард1</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/01.jpg">
+				<img class="tab-style__content-img" src="img/style/01.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/02.jpg">
+				<img class="tab-style__content-img" src="img/style/02.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+
+		<div class="tab-style__content-block">
+			<a class="tab-style__content-link" data-fancybox="gallery-style" href="img/style/03.jpg">
+				<img class="tab-style__content-img" src="img/style/03.jpg">
+			</a>
+
+			<p class="tab-style__content-caption">Стиль отделки Авангард</p>
+		</div>
+	</div>
+
+	<nav class="nav-local">
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_avangard-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-style_avangard-2')">2</button>
+	</nav>
+</div>
+<!-- end tab-style_avangard.html-->
 </div>
 <!-- end tab-style.html-->
+
+	<div class="tab-gallery" id="tab-gallery"></div>
+
 <!-- start tab-progress.html-->
 <div class="tab-progress tabcontent" id="tab-progress">
-	<div class="tab-progress__content">
+	<div class="tab-progress__content tabcontent-1" id="tab-progress-1">
 		<div class="tab-progress__block">
 			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
 				<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
@@ -526,16 +963,127 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="tab-progress__content tabcontent-1" id="tab-progress-2">
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
+				<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
+				<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
+				<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
+				<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
+				<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
+				<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/01.jpg">
+				<img class="tab-progress__content-img" src="img/progress/01.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, vitae.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/02.jpg">
+				<img class="tab-progress__content-img" src="img/progress/02.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ducimus eligendi dignissimos saepe cum fugiat, quaerat accusantium hic cumque repudiandae.</h4>
+			</div>
+		</div>
+
+		<div class="tab-progress__block">
+			<a class="tab-progress__content-link" data-fancybox="gallery-progress" href="img/progress/03.jpg">
+				<img class="tab-progress__content-img" src="img/progress/03.jpg" alt="">
+			</a>
+
+			<div class="tab-progress__block-desc">
+				<time class="tab-progress__block-time">19.05.1997</time>
+
+				<h4 class="tab-progress__block-title">Корпус 5. Ведутся подготовительные работы для начала строительства.</h4>
+			</div>
+		</div>
+	</div>
 
 	<nav class="nav-local">
-		<button class="nav-local__btn tablinks" type="button">1</button>
-		<button class="nav-local__btn tablinks" type="button">2</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-progress-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-progress-2')">2</button>
 	</nav>
 </div>
 <!-- end tab-progress.html-->
+
 <!-- start tab-stock.html-->
 <div class="tab-stock tabcontent" id="tab-stock">
-	<div class="tab-stock__content">
+	<div class="tab-stock__content tabcontent-1" id="tab-stock-1">
 		<div class="tab-stock__block">
 			<a class="tab-stock__link" data-fancybox data-src="#stock1" href="javascript:;">
 				<img class="tab-stock__img" src="img/stock/01.jpg" alt="">
@@ -624,12 +1172,169 @@
 		</div>
 	</div>
 
+	<div class="tab-stock__content tabcontent-1" id="tab-stock-2">
+		<div class="tab-stock__block">
+			<a class="tab-stock__link" data-fancybox data-src="#stock1" href="javascript:;">
+				<img class="tab-stock__img" src="img/stock/01.jpg" alt="">
+			</a>
+
+			<div class="tab-stock__desc">
+				<h4 class="tab-stock__desc-title">20.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
+
+				<p class="tab-stock__desc-text">
+					<a class="tab-stock__desc-text" data-fancybox href="#stock1" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+				</p>
+
+				<div class="stock__modal" id="stock1">
+					<div class="stock__modal-wrap">
+						<img class="stock__modal-img" src="img/stock/01.jpg" alt="">
+						<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-stock__block">
+			<a class="tab-stock__link" data-fancybox data-src="#stock2" href="javascript:;">
+				<img class="tab-stock__img" src="img/stock/02.jpg" alt="">
+			</a>
+
+			<div class="tab-stock__desc">
+				<h4 class="tab-stock__desc-title">20.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
+
+				<p class="tab-stock__desc-text">
+					<a class="tab-stock__desc-text" data-fancybox href="#stock2" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+				</p>
+
+				<div class="stock__modal" id="stock2">
+					<div class="stock__modal-wrap">
+						<img class="stock__modal-img" src="img/stock/02.jpg" alt="">
+						<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-stock__block">
+			<a class="tab-stock__link" data-fancybox data-src="#stock3" href="javascript:;">
+				<img class="tab-stock__img" src="img/stock/03.jpg" alt="">
+			</a>
+
+			<div class="tab-stock__desc">
+				<h4 class="tab-stock__desc-title">20.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
+
+				<p class="tab-stock__desc-text">
+					<a class="tab-stock__desc-text" data-fancybox href="#stock3" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+				</p>
+
+				<div class="stock__modal" id="stock3">
+					<div class="stock-modal-wrap">
+						<img class="stock__modal-img" src="img/stock/03.jpg" alt="">
+						<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-stock__block">
+			<a class="tab-stock__link" data-fancybox data-src="#stock4" href="javascript:;">
+				<img class="tab-stock__img" src="img/stock/01.jpg" alt="">
+			</a>
+
+			<div class="tab-stock__desc">
+				<h4 class="tab-stock__desc-title">20.01.2018 / Группа компаний "МИЦ" дарит скидки до 18%</h4>
+
+				<p class="tab-stock__desc-text">
+					<a class="tab-stock__desc-text" data-fancybox href="#stock5" href="javascript:;">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</a>
+				</p>
+
+				<div class="stock__modal" id="stock4">
+					<div class="stock__modal-wrap">
+						<img class="stock__modal-img" src="img/stock/01.jpg" alt="">
+						<p class="tab-stock__desc-text">Группа компаний "МИЦ" и банк "Российский капитал" запустили новую ипотечную программу - "Семейная ипотека с государственной поддержкой"</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<nav class="nav-local">
-		<button class="nav-local__btn tablinks" type="button">1</button>
-		<button class="nav-local__btn tablinks" type="button">2</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-stock-1')">1</button>
+		<button class="nav-local__btn tablinks-1" type="button" onclick="openTabInside(event, 'tab-stock-2')">2</button>
 	</nav>
 </div>
 <!-- end tab-stock.html-->
+
+<!-- start tab-calc.html-->
+<div class="calc tabcontent" id="tab-calc">
+	<header class="calc__header"><img src="img/calc-bg.jpg" alt=""></header>
+	<div class="calc__row">
+		<div class="calc__time">
+			<h3 class="calc__title">Срок кредита, лет</h3>
+			<div class="slider_time"></div>
+		</div>
+	</div>
+
+	<div class="calc__row calc__row_after-slider">
+		<div class="calc__field">
+			<h3 class="calc__title">Стоимость недвижимости, руб.</h3>
+			<input class="calc__input" id="cost" min="0" type="number" placeholder="Введите сумму *">
+		</div>
+
+		<div class="calc__field">
+			<h3 class="calc__title">Первоначальный взнос, руб</h3>
+			<input class="calc__input calc__input_payment" id="first-payment" min="0" type="number" placeholder="Введите сумму *">
+		</div>
+	</div>
+
+	<div class="calc__row">
+		<div class="calc__rate">
+			<h3 class="calc__title">Процентная ставка, % годовых</h3>
+			<div class="slider_rate"></div>
+		</div>
+	</div>
+
+	<div class="calc__row calc__row_after-slider">
+		<h3 class="calc__title">Сумма кредита</h3>
+		<p class="calc__cost calc__final-credit">0 руб.</p>
+	</div>
+
+	<div class="calc__row">
+		<h3 class="calc__title">Ежемесячный платёж</h3>
+		<p class="calc__cost calc__month-payment">0 руб.</p>
+	</div>
+
+	<button class="calc__btn" type="button">Посчитать</button>
+
+	<button class="calc__btn js_open-modal" type="button">Заявка на ипотеку</button>
+</div>
+
+<div class="modal">
+	<div class="modal__overlay js_close-modal"></div>
+	<div class="modal__content">
+		<button class="modal__close js_close-modal" type="button">X</button>
+		<h3 class="modal__title">Оставьте свою заявку!</h3>
+		<form class="modal__form" id="modal__form">
+			<div class="modal__form-row">
+				<label class="modal__form-label" for="name">Ваше имя</label>
+				<input class="modal__form-input" type="text" placeholder="Ваше имя">
+			</div>
+
+			<div class="modal__form-row">
+				<label class="modal__form-label" for="tel">Ваш телефон</label>
+				<input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+			</div>
+
+			<div class="modal__form-row">
+				<input class="calc__btn" type="submit" value="Отправить">
+			</div>
+		</form>
+	</div>
+</div>
+<!-- end tab-calc.html-->
 </section>
 <!-- end inside-full-desc.html-->
 <!-- start inside-interesting.html-->
@@ -639,7 +1344,9 @@
 
     <div class="interesting__wrap">
         <div class="build__item build__item_interesting">
-            <div class="build__img" style="background-image: url(img/4.jpg)"></div>
+            <div class="build__img">
+                <a  class="build__img-bg" href="inside.html"><img src="img/4.jpg" alt=""></a>
+            </div>
             <div class="build__desc">
                 <h2 class="build__title">ЖК UP-Квартал римский</h2>
                 <div class="build__desc-wrap">
@@ -648,14 +1355,16 @@
                         м. Домодедовская
                     </div>
                     <div class="build__price">
-                        <span> от <b>900</b> тыс. руб.</span>
+                        <span>Стоимость: от <b>900</b> тыс. руб.</span>
                         Срок сдачи: 2кв. 2018г.
                     </div>
                 </div>
             </div>
         </div>
         <div class="build__item build__item_interesting">
-            <div class="build__img" style="background-image: url(img/img-01.jpg)"></div>
+            <div class="build__img">
+                <a  class="build__img-bg" href="inside.html"><img src="img/img-01.jpg" alt=""></a>
+            </div>
             <div class="build__desc">
                 <h2 class="build__title">ЖК UP-Квартал римский</h2>
                 <div class="build__desc-wrap">
@@ -664,14 +1373,16 @@
                         м. Домодедовская
                     </div>
                     <div class="build__price">
-                        <span> от <b>900</b> тыс. руб.</span>
+                        <span>Стоимость: от <b>900</b> тыс. руб.</span>
                         Срок сдачи: 2кв. 2018г.
                     </div>
                 </div>
             </div>
         </div>
         <div class="build__item build__item_interesting">
-            <div class="build__img" style="background-image: url(img/1.jpg)"></div>
+            <div class="build__img">
+                <a  class="build__img-bg" href="inside.html"><img src="img/1.jpg" alt=""></a>
+            </div>
             <div class="build__desc">
                 <h2 class="build__title">ЖК UP-Квартал римский</h2>
                 <div class="build__desc-wrap">
@@ -680,14 +1391,16 @@
                         м. Домодедовская
                     </div>
                     <div class="build__price">
-                        <span> от <b>900</b> тыс. руб.</span>
+                        <span>Стоимость: от <b>900</b> тыс. руб.</span>
                         Срок сдачи: 2кв. 2018г.
                     </div>
                 </div>
             </div>
         </div>
         <div class="build__item build__item_interesting">
-            <div class="build__img" style="background-image: url(img/2.jpg)"></div>
+            <div class="build__img">
+                <a  class="build__img-bg" href="inside.html"><img src="img/2.jpg" alt=""></a>
+            </div>
             <div class="build__desc">
                 <h2 class="build__title">ЖК UP-Квартал римский</h2>
                 <div class="build__desc-wrap">
@@ -696,7 +1409,7 @@
                         м. Домодедовская
                     </div>
                     <div class="build__price">
-                        <span> от <b>900</b> тыс. руб.</span>
+                        <span>Стоимость: от <b>900</b> тыс. руб.</span>
                         Срок сдачи: 2кв. 2018г.
                     </div>
                 </div>
@@ -704,14 +1417,17 @@
         </div>
     </div>
 
-    <div class="partners__contacts" style="margin-top: 40px">
-        <span>Узнать больше по телефону:</span>
-        <a href="tel:+74993905571" class="btn-phone"><span>+7 (499) 390-55-71</span></a>
-        <a href="#" class="sidebar__feedback">Заказать обратный звонок</a>
-    </div>
+
 
 </section>
 <!-- end inside-interesting.html-->
+<!-- start partners-contact.html-->
+<div class="partners__contacts" style="margin-top: 40px">
+    <span>Узнать больше по телефону:</span>
+    <a href="tel:+74993905571" class="btn-phone"><span>+7 (499) 390-55-71</span></a>
+    <a href="#" class="sidebar__feedback">Заказать обратный звонок</a>
+</div>
+<!-- end partners-contact.html-->
 <!-- start footer.html-->
 <footer class="footer">
     <div class="footer__wrap">
@@ -777,6 +1493,8 @@
 <script src='js/owl.carousel.min.js'></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/script.min.js"></script>
+<script src="js/ACMap.js"></script>
+<script src="js/map-init.js"></script>
 </body>
 </html>
 

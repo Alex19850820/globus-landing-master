@@ -40,21 +40,23 @@
 						<span><?=fw_get_db_post_option($blogQuery->post->ID, 'price')?></span>
 						Срок сдачи: <?=fw_get_db_post_option($blogQuery->post->ID, 'period')?>
 					</div>
-					<a href="#" class="build__btn">Смотреть на карте</a>
+					<a href="#" class="build__btn" data-address="<?=fw_get_db_post_option($blogQuery->post->ID, 'address')?>">Смотреть на карте</a>
 					<a href="<?php the_permalink(); ?>" class="build__btn">Подробнее</a>
 				</div>
 			</div>
 		</div>
 	<?php };?>
-	<div class="build__pagination">
-		<?php $n = round(get_posts_count_per_cat(2)/6)?>
-		<?php for($i=1; $i<= $n; $i++):?>
-			<a href="#" id="next" data-page="<?=$i?>" ><?=$i?></a>
-		<?php endfor;?>
-	</div>
-	<div class="partners__contacts">
-		<span><?=$contacts['more']?></span>
-		<a href="tel:<?=$contacts['phone']?>" class="btn-phone"><span><?=$contacts['phone']?></span></a>
-		<a href="<?=$contacts['horder']?>" class="sidebar__feedback"><?=$contacts['order']?></a>
-	</div>
+	
 </section>
+
+<div class="build__pagination">
+	<?php $n = round(get_posts_count_per_cat(2)/6)?>
+	<?php for($i=1; $i<= $n; $i++):?>
+		<a href="#" id="next" data-page="<?=$i?>" data-cat="house" ><?=$i?></a>
+	<?php endfor;?>
+</div>
+<div class="partners__contacts">
+	<span><?=$contacts['more']?></span>
+	<a href="tel:<?=$contacts['phone']?>" class="btn-phone"><span><?=$contacts['phone']?></span></a>
+	<a href="<?=$contacts['horder']?>" class="sidebar__feedback"><?=$contacts['order']?></a>
+</div>

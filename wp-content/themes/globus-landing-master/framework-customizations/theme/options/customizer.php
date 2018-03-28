@@ -204,6 +204,43 @@ $options = [
 				'label' => __( 'Ссылка', '{domain}' ),
 				'value' => '#',
 			],
+			'new_build' => [
+				'type' => 'addable-popup',
+				'label' => __('Добавить информацию', '{domain}'),
+				'template' => '{{- text }}',
+				'size' => 'large', // small, medium, large
+				'limit' => 0, // limit the number of popup`s that can be added
+				'add-button-text' => __('добавить', '{domain}'),
+				'sortable' => true,
+				'popup-options' => [
+					'text' => [
+						'type'  => 'text',
+						'label' => __( 'Заголовок блока', '{domain}' ),
+						'value' => '',
+					],
+					'new_build' => [
+						'type' => 'addable-popup',
+						'label' => __('Добавить информацию блока', '{domain}'),
+						'template' => '{{- text }}',
+						'size' => 'large', // small, medium, large
+						'limit' => 0, // limit the number of popup`s that can be added
+						'add-button-text' => __('добавить', '{domain}'),
+						'sortable' => true,
+						'popup-options' => [
+							'text' => [
+								'type'  => 'text',
+								'label' => __( 'Текст', '{domain}' ),
+								'value' => '',
+							],
+							'href' => [
+									'type'  => 'text',
+									'label' => __( 'Ссылка', '{domain}' ),
+									'value' => '#',
+							],
+						],
+					],
+				],
+			],
 		],
 	],
 ];

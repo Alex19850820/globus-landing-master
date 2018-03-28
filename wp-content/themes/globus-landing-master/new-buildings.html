@@ -79,10 +79,10 @@
 <!-- start map.html-->
 <div class="map">
     <h2 class="map__title">новостройки <span>москвы и мо</span></h2>
-   <div class="map__wrap">
-       <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Abb86c324f976967ffdbe619e3a34ae9f40d8b437bafb8b3395f4d3b5352ebd62&amp;source=constructor"
-               width="100%" height="365" frameborder="0"></iframe>
+   <div class="map__wrap" id="yaMap">
+       <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
    </div>
+   
     <div class="map__wrapper">
         <a href="#" class="map__btn">показать объекты на карте</a>
     </div>
@@ -151,7 +151,8 @@
 
 <section class="build">
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/4.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/4.jpg" alt=""></a>
             <a href="#" class="build__btn-sale">Скидки</a>
             <a href="#" class="build__start-sales">Старт продаж</a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
@@ -167,13 +168,14 @@
                     <span> от <b>900</b> тыс. руб.</span>
                     Срок сдачи: 2кв. 2018г.
                 </div>
-                <a href="#" class="build__btn">Смотреть на карте</a>
+                <a href="#" class="build__btn" data-address="г. Москва, ул. Большая Лубянка 1">Смотреть на карте</a>
                 <a href="inside.html" class="build__btn">Подробнее</a>
             </div>
         </div>
     </div>
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/img-01.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/img-01.jpg" alt=""></a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
         </div>
         <div class="build__desc">
@@ -193,7 +195,8 @@
         </div>
     </div>
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/1.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/1.jpg" alt=""></a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
         </div>
         <div class="build__desc">
@@ -213,7 +216,8 @@
         </div>
     </div>
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/2.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/2.jpg" alt=""></a>
             <a href="#" class="build__start-sales">Старт продаж</a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
         </div>
@@ -234,7 +238,8 @@
         </div>
     </div>
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/img-02.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/img-02.jpg" alt=""></a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
         </div>
         <div class="build__desc">
@@ -254,7 +259,8 @@
         </div>
     </div>
     <div class="build__item">
-        <div class="build__img" style="background-image: url(img/3.jpg)">
+        <div class="build__img">
+            <a  class="build__img-bg" href="inside.html"><img src="img/3.jpg" alt=""></a>
             <a href="#" class="build__start-sales">Старт продаж</a>
             <span class="build__label">Ипотека 6,98% <i class="far fa-calendar-check"></i></span>
         </div>
@@ -352,6 +358,8 @@
 <script src='js/owl.carousel.min.js'></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 <script src="js/script.min.js"></script>
+<script src="js/ACMap.js"></script>
+<script src="js/map-init.js"></script>
 </body>
 </html>
 

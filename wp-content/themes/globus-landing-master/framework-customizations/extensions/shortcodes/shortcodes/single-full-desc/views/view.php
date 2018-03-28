@@ -12,14 +12,10 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-describe')" id="default">Описание</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-apartment')">Выбор квартиры</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-style')">Стиль отделки</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-gallery')">Галерея</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-stock')">Акции</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-progress')">Ход строительства</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-partners')">Банки партнёры</button></li>
-		<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, 'tab-calc')">Ипотечный калькулятор</button></li>
+		<?php fw_print( fw_get_db_post_option($ID,'category'))?>
+		<?php foreach ($atts['tabs'][0] as $tab => $value):?>
+			<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, '<?=$tab?>')" id="default"><?=$value?></button></li>
+		<?php endforeach;?>
 	</ul>
 
 	<div class="full-desc__content tabcontent" id="tab-describe">
@@ -650,6 +646,73 @@
 		</nav>
 	</div>
 	<!-- end tab-stock.html-->
-	<div class="tab-calc" id="tab-calc"></div>
+	
+	<!-- start tab-calc.html-->
+	<div class="calc tabcontent" id="tab-calc">
+		<header class="calc__header"><img src="<?php bloginfo('template_url')?>/img/calc-bg.jpg" alt=""></header>
+		<div class="calc__row">
+			<div class="calc__time">
+				<h3 class="calc__title">Срок кредита, лет</h3>
+				<div class="slider_time"></div>
+			</div>
+		</div>
+
+		<div class="calc__row calc__row_after-slider">
+			<div class="calc__field">
+				<h3 class="calc__title">Стоимость недвижимости, руб.</h3>
+				<input class="calc__input" id="cost" min="0" type="number" placeholder="Введите сумму *">
+			</div>
+
+			<div class="calc__field">
+				<h3 class="calc__title">Первоначальный взнос, руб</h3>
+				<input class="calc__input calc__input_payment" id="first-payment" min="0" type="number" placeholder="Введите сумму *">
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__rate">
+				<h3 class="calc__title">Процентная ставка, % годовых</h3>
+				<div class="slider_rate"></div>
+			</div>
+		</div>
+
+		<div class="calc__row calc__row_after-slider">
+			<h3 class="calc__title">Сумма кредита</h3>
+			<p class="calc__cost calc__final-credit">0 руб.</p>
+		</div>
+
+		<div class="calc__row">
+			<h3 class="calc__title">Ежемесячный платёж</h3>
+			<p class="calc__cost calc__month-payment">0 руб.</p>
+		</div>
+
+		<button class="calc__btn">Посчитать</button>
+		
+		<button class="calc__btn js_open-modal" type="button">Заявка на ипотеку</button>
+	</div>
+
+	<div class="modal">
+		<div class="modal__overlay js_close-modal"></div>
+		<div class="modal__content">
+			<button class="modal__close js_close-modal" type="button">X</button>
+			<h3 class="modal__title">Оставьте свою заявку!</h3>
+			<form class="modal__form" id="modal__form">
+				<div class="modal__form-row">
+					<label class="modal__form-label" for="name">Ваше имя</label>
+					<input class="modal__form-input" type="text" placeholder="Ваше имя">
+				</div>
+
+				<div class="modal__form-row">
+					<label class="modal__form-label" for="tel">Ваш телефон</label>
+					<input class="modal__form-input js_modal-mask" type="text" placeholder="Ваш телефон">
+				</div>
+
+				<div class="modal__form-row">
+					<input class="calc__btn" type="submit" value="Отправить">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- end tab-calc.html-->
 </section>
 <!-- end inside-full-desc.html-->

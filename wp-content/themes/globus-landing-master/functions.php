@@ -161,6 +161,8 @@ function globus_landing_master_scripts() {
 	wp_enqueue_script( 'globus-landing-master-js-all', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-js-jsmin', get_template_directory_uri() . '/js/script.min.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-script_form', get_template_directory_uri() . '/js/script_form.js', [], '', true );
+	wp_enqueue_script( 'globus-landing-master-ACMap', get_template_directory_uri() . '/js/ACMap.js', [], '', true );
+	wp_enqueue_script( 'globus-landing-master-map', get_template_directory_uri() . '/js/map-init.js', [], '', true );
 	/*wp_enqueue_script( 'globus-landing-master-js-jq', get_template_directory_uri() . '/js/jquery-3.2.1.js', [], '', true );*/
 	
 	/*
@@ -176,8 +178,13 @@ function globus_landing_master_scripts() {
 			'template' => get_template_directory_uri()
 		]
 	);
-
 	
+	wp_localize_script( 'globus-landing-master-map', 'myajax',
+		[
+			'url' => admin_url( 'admin-ajax.php' ),
+			'template' => get_template_directory_uri()
+		]
+	);
 
 	wp_enqueue_script( 'globus-landing-master-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -255,3 +262,23 @@ function _action_theme_wp_print_styles() {
 	     . '</style>';
 }
 add_action('wp_print_styles', '_action_theme_wp_print_styles');
+
+/**
+ * Customizer taxonomy.
+ */
+register_nav_menus(array(
+	'menu 1'    => 'Городская недвижимость',    //Название месторасположения меню в шаблоне
+	'menu 2' => 'Загородная недвижимость'      //Название другого месторасположения меню в шаблоне
+));
+
+
+function add_menuclass($ulclass) {
+	return preg_replace('/<a /', '<a class="header__nav-link header__nav-link_list"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');
+
+function _filter_my_custom_breadcrumbs_items( $items ) {
+	// do some changes ...
+	return $items;
+}
+add_filter( 'fw_ext_breadcrumbs_build', '_filter_my_custom_breadcrumbs_items' );
