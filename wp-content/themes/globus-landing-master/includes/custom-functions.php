@@ -11,6 +11,9 @@ add_action( 'wp_ajax_get_next_page', 'get_next_page' );
 add_action( 'wp_ajax_nopriv_get_next_page', 'get_next_page' );
 add_action( 'wp_ajax_take_map', 'take_map' );
 add_action( 'wp_ajax_nopriv_take_map', 'take_map' );
+add_action( 'wp_ajax_get_table', 'get_table' );
+add_action( 'wp_ajax_nopriv_get_table', 'get_table' );
+
 //
 function get_next_page () { ?>
 	<?php $blogQuery = new WP_Query( [
@@ -90,3 +93,80 @@ function get_next_page () { ?>
 		</script>
 	</div>
 <?php die();}?>
+<?php function get_table (){ ?>
+	<?php global $wpdb;
+	$cost = explode(' млн.', $_POST['cost']);
+	$cost = ($cost[0]) * 1000000;
+	$area = explode(' м2', $_POST['area']);
+	$area = $area[0];
+	$flats = $_POST['flats'];
+	$jk = $_POST['jk_id'];
+	$region = $_POST['region'];
+	$property = $_POST['property'];
+	
+	if(isset($property)) {
+		$Query = new WP_Query( [
+			'category_name' => $property,
+		] );
+		$title = [];
+		foreach( $Query->posts as $pst => $val ){
+			$title[] = $val->post_title;
+		}
+		
+		
+		$nlink = $wpdb->get_results("SELECT *
+												  FROM wp_property
+												  WHERE jk_id IN (  '". implode("," , $title)."')
+												  AND price >= '".$cost."'
+												  AND area >=  '".$area."'
+												  AND flats = ".$flats."
+												   ");
+		
+		fw_print($nlink);
+	}
+
+	
+	?>
+	<?php if($flats == '4+'):?>
+		<?php $mylink = $wpdb->get_results("SELECT *
+												  FROM wp_property
+												  WHERE jk_id = '".$jk."'
+												  AND price >= '".$cost."'
+												  AND area >=  '".$area."'
+												  AND flats >=  '4'
+												   ");?>
+	<?php else:?>
+		<?php $mylink = $wpdb->get_results("SELECT *
+												  FROM wp_property
+												  WHERE jk_id = '".$jk."'
+												  AND price >= '".$cost."'
+												  AND area >=  '".$area."'
+												  AND flats = '".$flats."'
+												   ");?>
+	<?php endif;?>
+	
+			<thead class="apartment__table-head">
+			<tr class="apartment__table-tr">
+				<th class="apartment__table-th">Корпус</th>
+				<th class="apartment__table-th">Секц.</th>
+				<th class="apartment__table-th">Комн</th>
+				<th class="apartment__table-th">Этаж</th>
+				<th class="apartment__table-th">Площадь</th>
+				<th class="apartment__table-th">Отделка</th>
+				<th class="apartment__table-th">Стоимость</th>
+			</tr>
+			</thead>
+			<tbody class="apartment__table-body">
+				<?php foreach ($mylink as $value):?>
+					<tr class="apartment__table-tr">
+						<td class="apartment__table-td"><?=$value->housing?></td>
+						<td class="apartment__table-td"><?=$value->section?></td>
+						<td class="apartment__table-td"><?=$value->flats?></td>
+						<td class="apartment__table-td"><?=$value->floor?></td>
+						<td class="apartment__table-td"><?=$value->area?></td>
+						<td class="apartment__table-td"><?=$value->decoration?></td>
+						<td class="apartment__table-td"><?=$value->price?></td>
+					</tr>
+				<?php endforeach;?>
+			</tbody>
+<?php }?>

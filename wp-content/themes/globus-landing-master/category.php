@@ -8,6 +8,8 @@
 get_header();
 
 $cat_name = get_query_var('category_name');
+$cur_id = get_the_category( $post->ID );
+
 ?>
 	<!-- start crumbs.html-->
 	<section class="crumbs">
@@ -108,7 +110,7 @@ $cat_name = get_query_var('category_name');
 
 		?>
 		
-		<?php $i = 0; while ( $blogQuery->have_posts() ) { $blogQuery->the_post();  ?>
+		<?php $z = 0; while ( $blogQuery->have_posts() ) { $z++; $blogQuery->the_post();  ?>
 			<div class="build__item">
 				<div class="build__img">
 					<a  class="build__img-bg" href="<?php the_permalink(); ?>">
@@ -141,7 +143,7 @@ $cat_name = get_query_var('category_name');
 	</section>
 
 	<div class="build__pagination">
-		<?php $n = round(get_posts_count_per_cat(2)/6)?>
+		<?php $n = get_the_category($post->ID)[0]->category_count/6; ?>
 		<?php for($i=1; $i<= $n; $i++):?>
 			<a href="#" id="next" data-page="<?=$i?>" data-cat="<?=$cat_name?>" ><?=$i?></a>
 		<?php endfor;?>

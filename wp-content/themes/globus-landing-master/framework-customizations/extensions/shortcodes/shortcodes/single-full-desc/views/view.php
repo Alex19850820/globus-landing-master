@@ -12,7 +12,7 @@
 <section class="full-desc">
 
 	<ul class="full-desc__navigation">
-		<?php fw_print( fw_get_db_post_option($ID,'category'))?>
+<!--		--><?php //fw_print( fw_get_db_post_option($ID,'category'))?>
 		<?php foreach ($atts['tabs'][0] as $tab => $value):?>
 			<li><button class="full-desc__btn tablinks" type="button" onclick="openTab(event, '<?=$tab?>')" id="default"><?=$value?></button></li>
 		<?php endforeach;?>
@@ -358,7 +358,74 @@
 
 	</div>
 	<!-- end tab-partners.html-->
+
+	<!-- start tab-apartment.html-->
+	<div class="apartment tabcontent" id="tab-apartment">
+		<div class="apartment__sliders">
+			<div class="apartment__slider">
+				<div class="header-range">
+					<span class="title-range">Стоимость:</span>
+					<div class="header-range__btns">
+						<button class="header-range__btn header-range__btn_active"><i class="fas fa-ruble-sign"></i></button><button class="header-range__btn">$</button><button class="header-range__btn">&#8364;</button>
+					</div>
+				</div>
+				<div id="cost" class="slider"></div>
+			</div>
+
+			<div class="apartment__slider">
+				<div class="property-selection__range-slide property-selection__range-slide_area">
+					<span class="title-range">Площадь, м<sup>2</sup></span>
+					<div id="area" class="slider_area"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="apartment__filter">
+			<div id="flats" class="property-selection__rooms">
+				<span class="title-range">Кол-во комнат:</span>
+				<div class="property-selection__numbers">1</div>
+				<div class="property-selection__numbers active">2</div>
+				<div class="property-selection__numbers">3</div>
+				<div class="property-selection__numbers">4+</div>
+			</div>
+			<button class="calc__btn calc__btn_apartment" id="get_table" data-jk="<?=get_the_title()?>" type="button">Подобрать квартиру</button>
+		</div>
+		<?php
+		global $wpdb;
+		$mylink = $wpdb->get_results("SELECT * FROM wp_property WHERE jk_id = '".get_the_title()."'");?>
+		<table class="apartment__table" id="table">
+			<thead class="apartment__table-head">
+			<tr class="apartment__table-tr">
+				<th class="apartment__table-th">Корпус</th>
+				<th class="apartment__table-th">Секц.</th>
+				<th class="apartment__table-th">Комн</th>
+				<th class="apartment__table-th">Этаж</th>
+				<th class="apartment__table-th">Площадь</th>
+				<th class="apartment__table-th">Отделка</th>
+				<th class="apartment__table-th">Стоимость</th>
+			</tr>
+			</thead>
+
+			<tbody class="apartment__table-body">
+				<?php foreach ($mylink as $value):?>
+					<tr class="apartment__table-tr">
+						<td class="apartment__table-td"><?=$value->housing?></td>
+						<td class="apartment__table-td"><?=$value->section?></td>
+						<td class="apartment__table-td"><?=$value->flats?></td>
+						<td class="apartment__table-td"><?=$value->floor?></td>
+						<td class="apartment__table-td"><?=$value->area?></td>
+						<td class="apartment__table-td"><?=$value->decoration?></td>
+						<td class="apartment__table-td"><?=$value->price?></td>
+					</tr>
+				<?php endforeach;?>
+			</tbody>
+		</table>
+	</div>
+
+	<!-- end tab-apartment.html-->
+	
 	<div class="tab-apartment" id="tab-apartment"></div>
+	
 	<!-- start tab-style.html-->
 	<div class="tab-style tabcontent" id="tab-style">
 		<div class="tab-style__nav-global">

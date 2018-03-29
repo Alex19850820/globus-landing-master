@@ -1,10 +1,12 @@
 <?php if ( ! defined( 'FW' ) ) {
     die( 'Forbidden' );
 }
-/*
+/**
   * Верстка шорткода
   * весь контент лежит в переменной $atts
-  */
+  *@var $atts array
+  *
+  **/
 
 ?>
 <!-- start property-selection.html-->
@@ -22,30 +24,22 @@
 					<button class="header-range__btn header-range__btn_active"><i class="fas fa-ruble-sign"></i></button><button class="header-range__btn">$</button><button class="header-range__btn">&#8364;</button>
 				</div>
 			</div>
-			<div class="slider"></div>
+			<div class="slider" id="cost"></div>
 
 			<div class="custom-select">
-				<select>
+				<select id="region" required>
 					<option value="0">Выберете регион</option>
-					<option value="1">в Ростовской обл.</option>
-					<option value="2">в Московской обл.</option>
-					<option value="3">в Ростовской обл.</option>
-					<option value="4">в Московской обл.</option>
-					<option value="5">в Ростовской обл.</option>
-					<option value="6">в Московской обл.</option>
-					<option value="7">в Ростовской обл.</option>
+					<?php foreach ($atts['region'] as $region):?>
+						<option value="<?=$region['text']?>"><?=$region['text2']?></option>
+					<?php endforeach;?>
 				</select>
 			</div>
 			<div class="custom-select">
-				<select>
+				<select id="property">
 					<option value="0">Вся недвижимость</option>
-					<option value="1">Апартаменты</option>
-					<option value="2">Апартаменты</option>
-					<option value="3">Апартаменты</option>
-					<option value="4">Апартаменты</option>
-					<option value="5">Апартаменты</option>
-					<option value="6">Апартаменты</option>
-					<option value="7">Апартаменты</option>
+					<?php foreach ($atts['jk'] as $region):?>
+						<option value="<?=$region['text2']?>"><?=$region['text']?></option>
+					<?php endforeach;?>
 				</select>
 			</div>
 
@@ -53,9 +47,9 @@
 
 		<div class="property-selection__range-slide property-selection__range-slide_area">
 			<span class="title-range">Площадь, м<sup>2</sup></span>
-			<div class="slider_area"></div>
+			<div class="slider_area" id="area"></div>
 
-			<div class="property-selection__rooms">
+			<div class="property-selection__rooms" id="flats">
 				<span class="title-range">Кол-во комнат:</span>
 				<div class="property-selection__numbers">1</div>
 				<div class="property-selection__numbers active">2</div>
@@ -65,8 +59,9 @@
 
 		</div>
 
-		<a href="#" class="btn-white">показать</a>
+		<a href="#" class="btn-white" id="get_table">показать</a>
 	</form>
+	<div id="result"></div>
 
 </section>
 <!-- end property-selection.html-->

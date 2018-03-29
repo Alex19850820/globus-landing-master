@@ -163,6 +163,7 @@ function globus_landing_master_scripts() {
 	wp_enqueue_script( 'globus-landing-master-script_form', get_template_directory_uri() . '/js/script_form.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-ACMap', get_template_directory_uri() . '/js/ACMap.js', [], '', true );
 	wp_enqueue_script( 'globus-landing-master-map', get_template_directory_uri() . '/js/map-init.js', [], '', true );
+	wp_enqueue_script( 'globus-landing-table', get_template_directory_uri() . '/js/jquery.tablesorter.js', [], '', true );
 	/*wp_enqueue_script( 'globus-landing-master-js-jq', get_template_directory_uri() . '/js/jquery-3.2.1.js', [], '', true );*/
 	
 	/*
@@ -268,7 +269,10 @@ add_action('wp_print_styles', '_action_theme_wp_print_styles');
  */
 register_nav_menus(array(
 	'menu 1'    => 'Городская недвижимость',    //Название месторасположения меню в шаблоне
-	'menu 2' => 'Загородная недвижимость'      //Название другого месторасположения меню в шаблоне
+	'menu 2' => 'Загородная недвижимость',      //Название другого месторасположения меню в шаблоне
+	'menu 3' => 'Футер',      //Название другого месторасположения меню в шаблоне,
+	'menu 4' => 'Футер2',      //Название другого месторасположения меню в шаблоне
+	'menu 5' => 'Футер3'      //Название другого месторасположения меню в шаблоне
 ));
 
 
@@ -282,3 +286,34 @@ function _filter_my_custom_breadcrumbs_items( $items ) {
 	return $items;
 }
 add_filter( 'fw_ext_breadcrumbs_build', '_filter_my_custom_breadcrumbs_items' );
+
+/*Добавляем алмин страницу*/
+add_action('admin_menu', function(){
+	add_menu_page( 'Страница импорта EXCELL', 'Импорт EXCEL', 'manage_options', 'site-options', 'add_my_setting', '', 75 );
+} );
+
+// функция отвечает за вывод страницы настроек
+// подробнее смотрите API Настроек: http://wp-kama.ru/id_3773/api-optsiy-nastroek.html
+function add_my_setting(){
+	?>
+	<div class="wrap">
+		<h2><?php echo get_admin_page_title() ?></h2>
+		
+		<?php
+		// settings_errors() не срабатывает автоматом на страницах отличных от опций
+		if( get_current_screen()->parent_base !== 'options-general' )
+			settings_errors('название_опции');
+		?>
+		
+<!--		<form action="options.php" method="POST">-->
+<!--			--><?php
+//			settings_fields("opt_group");     // скрытые защитные поля
+//			do_settings_sections("opt_page"); // секции с настройками (опциями).
+//			submit_button();
+//			?>
+<!--		</form>-->
+		<?php require get_template_directory() . '/includes/loadfile.php';?>
+	</div>
+	<?php
+	
+}

@@ -5,6 +5,9 @@
   * Верстка шорткода
   * весь контент лежит в переменной $atts
   */
+$cat_name = get_query_var('post_type');
+$cur_id = get_the_category( $post->ID );
+$count = get_the_category($post->ID)[0]->category_count;
 
 ?>
 
@@ -14,10 +17,9 @@
 		'posts_per_page' => 6,
 	]);
 	$contacts = fw_get_db_customizer_option();
-	
 	?>
 	
-	<?php $i = 0; while ( $blogQuery->have_posts() ) { $blogQuery->the_post();  ?>
+	<?php $z = 0; while ( $blogQuery->have_posts() ) { $z++; $blogQuery->the_post();  ?>
 		<div class="build__item">
 			<div class="build__img">
 				<a  class="build__img-bg" href="<?php the_permalink(); ?>">
@@ -50,7 +52,8 @@
 </section>
 
 <div class="build__pagination">
-	<?php $n = round(get_posts_count_per_cat(2)/6)?>
+	
+	<?php   $n = round(get_the_category($post->ID)[0]->category_count/6)?>
 	<?php for($i=1; $i<= $n; $i++):?>
 		<a href="#" id="next" data-page="<?=$i?>" data-cat="house" ><?=$i?></a>
 	<?php endfor;?>

@@ -9,24 +9,87 @@
  * @package globus-landing-master
  */
 $contacts = fw_get_db_customizer_option();
+
+// Получим элементы меню на основе параметра $menu_name (тоже что и 'theme_location' или 'menu' в аргументах wp_nav_menu)
+// Этот код - основа функции wp_nav_menu, где получается ID меню из слага
+$menu_name = 'menu 3';
+$locations = get_nav_menu_locations();
+$menu_name2 = 'menu 4';
+$locations2 = get_nav_menu_locations();
+$menu_name3 = 'menu 5';
+$locations3 = get_nav_menu_locations();
+
+
 ?>
 
 <!-- start footer.html-->
 <footer class="footer">
 	<div class="footer__wrap">
-		<?php if(!empty($contacts['new_build'])):?>
-			<?php foreach ($contacts['new_build'] as $footer):?>
 				<div class="footer__item">
-					<h3 class="footer__title"><?=$footer['text']?></h3>
+					<?php
+					if( $locations && isset($locations[ $menu_name ]) ){
+						$menu = wp_get_nav_menu_object( $locations[ $menu_name ] ); // получаем объект меню
+						$menu_items = wp_get_nav_menu_items( $menu ); // получаем элементы меню
+						// создаем список
+						$menu_list = '<h3 class="footer__title">';
+						foreach ( (array) $menu_items as $key => $menu_item ){
+							$menu_list .= '<a href="' . $menu_item->url . '" style ="color:#b89855;">' . $menu_item->title . '</a>';
+						}
+						echo $menu_list .= '</h3>';
+					}
+					else
+						echo $menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+					?>
 					<ul class="footer__nav">
-						
-						<?php foreach ($footer['new_build'] as $nav):?>
-							<li><a href="<?=$nav['href']?>"><?=$nav['text']?></a></li>
-						<?php endforeach;?>
 					</ul>
 				</div>
-			<?php endforeach;?>
-		<?php endif;?>
+				<div class="footer__item">
+					
+						<?php
+						if( $locations2 && isset($locations2[ $menu_name2 ]) ){
+							$menu = wp_get_nav_menu_object( $locations2[ $menu_name2 ] ); // получаем объект меню
+							$menu_items = wp_get_nav_menu_items( $menu ); // получаем элементы меню
+							// создаем список
+							$menu_list = '<h3 class="footer__title">'.$menu_items[0]->title.'</h3>';
+							$menu_list .= '<ul class="footer__nav" >';
+							foreach ( (array) $menu_items as $key => $menu_item ){
+								$menu_list .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+							}
+							echo $menu_list .= '</ul>';
+						}
+						else
+							echo $menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+						?>
+					<ul class="footer__nav">
+					</ul>
+				</div>
+				<div class="footer__item">
+					
+					<?php
+					if( $locations3 && isset($locations3[ $menu_name3 ]) ){
+						$menu = wp_get_nav_menu_object( $locations3[ $menu_name3 ] ); // получаем объект меню
+						$menu_items = wp_get_nav_menu_items( $menu ); // получаем элементы меню
+						// создаем список
+						$menu_list = '<h3 class="footer__title">'.$menu_items[0]->title.'</h3>';
+						$menu_list .= '<ul class="footer__nav" >';
+						foreach ( (array) $menu_items as $key => $menu_item ){
+							$menu_list .= '<li><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+						}
+						echo $menu_list .= '</ul>';
+					}
+					else
+						echo $menu_list = '<ul><li>Меню "' . $menu_name . '" не определено.</li></ul>';
+					?>
+					<ul class="footer__nav">
+					</ul>
+				</div>
+		
+		
+
+		
+		
+		
+		
 		<div class="footer__item">
 			<h3 class="footer__title">Контакты</h3>
 			<ul class="footer__nav">
